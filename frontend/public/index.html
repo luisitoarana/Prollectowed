@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Atractivo</title>
+  <link rel="stylesheet" href="App.css  "> <!-- Enlaza tu archivo CSS -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+  <!-- funcion para  enlasar  todo  soble  la  pagina , enlasa   todo  los  html  posibles   -->
+  <nav class="nav-main">
+    <div class="nav-brand">
+      <img src="rosario.png" alt="Brand Logo">
+    </div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Inicio</a></li> <!-- Enlace al principal -->
+      <li><a href="explorar.html">Productos</a></li> <!-- Enlace al secundario -->
+      <li><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+    <button class="menu-btn">&#9776;</button>
+  </nav>
+
+  <!--   este  es  el  botton    ,Me lleva    alos  productos    -->
+  <header class="showcase">
+    <h1>Bienvenidos a Nuestra Tienda</h1>
+    <p>Descubre los mejores productos artesanales y alimenticios.</p>
+    <a href="explorar.html" class="btn">Explorar</a> <!-- Enlace al secundario -->
+  </header>
+
+  <!--   imagenes  decrictiva  de  inicio  pueden  cmabiar  las  imagens  por   la imagen  que  desen  
+     ,Ojo  que  primero agregamos  la  imgen  ala  carpeta    com  .png   -->
+  <section class="news-cards container">
+    <div class="card">
+      <img src="pan.png" alt="Pan Casero">
+      <h3>Pan Casero</h3>
+      <p>Delicioso pan artesanal, recién horneado cada día.</p>
+      <a href="#">Más Información</a>
+    </div>
+    <div class="card">
+      <img src="rosario.png" alt="Rosarios Artesanales">
+      <h3>Rosarios Artesanales</h3>
+      <p>Hechos a mano con amor y dedicación por la comunidad.</p>
+      <a href="#">Más Información</a>
+    </div>
+    <div class="card">
+      <img src="pan.png" alt="Rosarios Artesanales">
+      <h3>Rosarios Artesanales</h3>
+      <p>Hechos a mano con amor y dedicación por la comunidad.</p>
+      <a href="#">Más Información</a>
+    </div>
+    <div class="card">
+      <img src="rosario.png" alt="Rosarios Artesanales">
+      <h3>Rosarios Artesanales</h3>
+      <p>Hechos a mano con amor y dedicación por la comunidad.</p>
+      <a href="#">Más Información</a>
+    </div>
+    <div class="card">
+      <img src="miel.png" alt="Miel Pura">
+      <h3>Miel Pura</h3>
+      <p>100% natural, recolectada directamente de nuestros panales.</p>
+      <a href="#">Más Información</a>
+    </div>
+  </section>
+
+  <!--  Descriccion  leve  de  la  parte  de  avajo 
+    de  la  pagina  ,pueden cambiar al  gusto -->
+  <footer class="footer">
+    <p>&copy; 2024 Tienda Artesanal. Todos los derechos reservados.</p>
+  </footer>
+
+  <!--  funcionalidad  del  boton   explorar  
+    al  presionar  igual  te   lleva alos  productos   -->
+  <script>
+    // Navbar Toggle
+    document.querySelector(".menu-btn").addEventListener("click", () => {
+      document.querySelector(".nav-menu").classList.toggle("show");
+    });
+
+    // ScrollReveal Animations
+    ScrollReveal().reveal('.showcase');
+    ScrollReveal().reveal('.news-cards', { delay: 500 });
+  </script>
+
+</body>
+</html>

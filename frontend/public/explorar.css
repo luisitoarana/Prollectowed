@@ -1,0 +1,240 @@
+/* Reset de estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ff7f50;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Título de sección */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #555;
+}
+
+/* Contenedor de productos */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Esto permite que las tarjetas se acomoden cuando no haya espacio */
+    justify-content: center; /* Alinea las tarjetas al centro */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Tarjetas de productos */
+.product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    max-width: 250px; /* Tamaño más pequeño */
+    margin: 0 auto;
+}
+
+.product-card:hover {
+    transform: translateX(10px); /* Desliza a la derecha */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+/* Imagen del producto */
+.product-image {
+    width: 100%;
+    height: 150px; /* Imagen más pequeña */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Información del producto */
+.product-card h3 {
+    font-size: 1rem; /* Más pequeño */
+    color: #333;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.product-card .price {
+    font-size: 1.1rem;
+    color: #28a745;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.product-card .stock {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* Botón de compra */
+.buy-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Botón más pequeño */
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto; /* No tan ancho */
+    margin-top: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.buy-btn:active {
+    background-color: #003f7d;
+}
+
+/* Modal (ventana emergente) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden; /* Ocultar modal por defecto */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal.hidden {
+    visibility: hidden;
+}
+
+.modal:not(.hidden) {
+    visibility: visible;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 48%;
+    text-transform: uppercase;
+}
+
+#confirm-purchase {
+    background-color: #28a745;
+    color: white;
+}
+
+#cancel-purchase {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ff7f50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff4500;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        flex-wrap: wrap;
+    }
+
+    .product-card {
+        height: auto;
+    }
+}

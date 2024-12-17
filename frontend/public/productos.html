@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Productos</title>
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="nav-main">
+        <div class="nav-brand">
+            <img src="rosario.png" alt="Logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Agregar Producto -->
+    <section class="form-section">
+        <h2>Agregar Producto</h2>
+        <form id="add-product-form">
+            <!-- Nombre del producto -->
+            <label for="product-name">Nombre del Producto</label>
+            <input type="text" id="product-name" placeholder="Ejemplo: Mermelada artesanal" required>
+
+            <!-- Descripción -->
+            <label for="product-description">Descripción</label>
+            <textarea id="product-description" placeholder="Describe el producto aquí..." required></textarea>
+
+            <!-- Tipo de Producto -->
+            <label for="product-type">Tipo de Producto</label>
+            <select id="product-type" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="consumo">Consumo Humano</option>
+                <option value="decoracion">Decoración</option>
+                <option value="otros">Otros</option>
+            </select>
+
+            <!-- Stock -->
+            <label for="product-stock">Stock</label>
+            <input type="number" id="product-stock" min="1" required placeholder="Ejemplo: 50">
+
+            <!-- Precio -->
+            <label for="product-price">Precio</label>
+            <input type="number" id="product-price" required placeholder="Ejemplo: 10.99">
+
+            <!-- Botón de Agregar -->
+            <button type="submit" class="add-btn">Agregar Producto</button>
+        </form>
+
+        <!-- Productos Agregados -->
+        <h3>Productos Agregados</h3>
+        <div id="products-list" class="products-list">
+            <!-- Los productos se agregarán aquí dinámicamente -->
+        </div>
+    </section>
+
+    <script src="productos.js"></script>
+</body>
+</html>

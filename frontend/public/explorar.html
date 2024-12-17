@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de Productos</title>
+  <link rel="stylesheet" href="explorar.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav-main">
+    <div class="nav-brand">
+      <img src="rosario.png" alt="Brand Logo">
+    </div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="explorar.html">Productos</a></li>
+      <li><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+    <button class="menu-btn">&#9776;</button>
+  </nav>
+
+  <!-- Sección de Productos , 
+    Es  donde  se  ba  agregar  las  targetas  o  productos  pocibles  -->
+  <section class="product-section">
+    <h2 class="section-title">Productos en Venta</h2>
+    <div id="productsContainer" class="productsContainer">
+      <!-- Las tarjetas de producto se cargarán dinámicamente aquí -->
+    </div>
+  </section>
+
+  <!-- Modal para Comprar,  En si  es  la ventanida   de  compra  que  sale   -->
+  <section id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Comprar Producto</h3>
+      <p id="product-name-modal"></p>
+      <label for="product-quantity">Cantidad:</label>
+      <input type="number" id="product-quantity" min="1" value="1">
+      <div class="modal-actions">
+        <button id="confirm-purchase">Confirmar</button>
+        <button id="cancel-purchase">Cancelar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script que carga los productos -->
+  <script src="explorar.js"></script>
+</body>
+</html>
